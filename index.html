@@ -1,1 +1,69 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Fani</title>
+
+<style>
+body {
+  background: black;
+  color: #00ff88;
+  font-family: monospace;
+  padding: 40px;
+}
+
+button {
+  background: #00ff88;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#memory {
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MICRON MEMORY SYSTEM</h1>
+
+<p>Employee: Fani</p>
+<p>Location: Taichung, Taiwan</p>
+<p>Firmware v23.0</p>
+
+<button onclick="nextMemory()">
+Access Memory
+</button>
+
+<div id="memory"></div>
+
+<script>
+const memories = [
+  "Memory Sector #01: First impression: arrogant.",
+  "Memory Sector #02: Diagnosis update: just resting face.",
+  "Memory Sector #03: KKN happened.",
+  "Memory Sector #04: Somehow became one of my favorite people.",
+  "Memory Sector #05: Distance to Taichung ≈ 3700 km.",
+  "Memory Sector #06: Friendship distance ≈ 0 km.",
+  "ERROR: Attempting to delete friendship...",
+  "ACCESS DENIED.",
+  "Reason: Stored permanently.",
+  "Happy 23rd Birthday, Fani ❤️"
+];
+
+let index = 0;
+
+function nextMemory() {
+  if (index < memories.length) {
+    document.getElementById("memory").innerHTML +=
+      "<p>" + memories[index] + "</p>";
+    index++;
+  }
+}
+</script>
+
+</body>
+</html>
