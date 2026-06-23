@@ -1,69 +1,346 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Happy Birthday Fani</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micron Memory System</title>
 
 <style>
-body {
-  background: black;
-  color: #00ff88;
-  font-family: monospace;
-  padding: 40px;
+body{
+    background:#050505;
+    color:#00ff88;
+    font-family: "Courier New", monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+    padding:20px;
 }
 
-button {
-  background: #00ff88;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
+.container{
+    max-width:800px;
+    width:100%;
+    border:1px solid #00ff88;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,255,136,.2);
 }
 
-#memory {
-  margin-top: 25px;
+h1{
+    margin-top:0;
+}
+
+#output{
+    white-space:pre-wrap;
+    line-height:1.6;
+    min-height:300px;
+}
+
+button{
+    background:#00ff88;
+    color:#000;
+    border:none;
+    padding:12px 18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:20px;
+    font-family:inherit;
+}
+
+button:hover{
+    opacity:.9;
 }
 </style>
 </head>
-
 <body>
 
-<h1>MICRON MEMORY SYSTEM</h1>
+<div class="container">
+<pre id="output">
+MICRON MEMORY SYSTEM
+────────────────────────
 
-<p>Employee: Fani</p>
-<p>Location: Taichung, Taiwan</p>
-<p>Firmware v23.0</p>
+Employee : Fani
+Location : Taichung, Taiwan
+Distance : 3,700 km from Yogyakarta
+Firmware : v24.0
 
-<button onclick="nextMemory()">
-Access Memory
-</button>
+System Status : ONLINE
+Memory Capacity : Apparently Unlimited
 
-<div id="memory"></div>
+Birthday Protocol : DETECTED
+
+Press INITIALIZE.
+</pre>
+
+<button onclick="nextMemory()">INITIALIZE</button>
+
+</div>
 
 <script>
+
 const memories = [
-  "Memory Sector #01: First impression: arrogant.",
-  "Memory Sector #02: Diagnosis update: just resting face.",
-  "Memory Sector #03: KKN happened.",
-  "Memory Sector #04: Somehow became one of my favorite people.",
-  "Memory Sector #05: Distance to Taichung ≈ 3700 km.",
-  "Memory Sector #06: Friendship distance ≈ 0 km.",
-  "ERROR: Attempting to delete friendship...",
-  "ACCESS DENIED.",
-  "Reason: Stored permanently.",
-  "Happy 23rd Birthday, Fani ❤️"
+
+`> Loading Memory Sector #01...
+
+FIRST IMPRESSION
+
+Status : Corrupted
+
+Records found:
+
+• Extrovert
+• Arrogant
+• Slightly scary
+
+Running correction...
+
+Updated result:
+
+• Garing jokes
+• Weirdly kind
+• "Nrimo ing pandum" vibes
+• Dangerously smart
+
+Overall Rating:
+★★★★★`,
+
+`> Loading Memory Sector #02...
+
+KKN PARTNERSHIP
+
+Assigned role:
+Sleeping Partner
+
+Performance Review
+
+Pros:
+✓ Reliable
+✓ Nice human being
+✓ Easy to live with
+
+Cons:
+✗ Sleeps before the conversation gets interesting
+
+Verdict:
+Not suitable for midnight gossip operations.`,
+
+`> Loading Memory Sector #03...
+
+HEART INSPECTION
+
+Scanning material...
+
+❌ Titanium
+❌ Carbon Fiber
+❌ Semiconductor-grade Silicon
+
+Detected:
+
+✅ Soft Sponge
+✅ Hello Kitty Energy
+
+System Note:
+Very squishable human.`,
+
+`> Loading Memory Sector #04...
+
+HISTORICAL ARCHIVE
+
+The last time I gave you a letter
+was on the last day of KKN.
+
+I bet you already forgot.
+
+Congratulations.
+
+You have received another one.`,
+
+`> Loading Memory Sector #05...
+
+DISTANCE ANALYSIS
+
+Yogyakarta ↔ Taichung
+
+Physical Distance:
+≈ 3,700 km
+
+Friendship Distance:
+≈ 0 km
+
+Signal Strength:
+Excellent`,
+
+`> Loading Memory Sector #06...
+
+UNEXPECTED EVENT
+
+System Log:
+
+No hello detected.
+
+Then suddenly...
+
+HELLO FROM TAIWAN
+
+Engineers are still investigating
+this strange phenomenon.`,
+
+`> Loading Memory Sector #07...
+
+Friendship Removal Utility
+
+Running:
+
+delete_friendship.exe
+
+Processing...
+
+Processing...
+
+ERROR
+
+ACCESS DENIED
+
+Reason:
+Stored Permanently.`,
+
+`> Loading Memory Sector #08...
+
+IMPORTANT RECORD
+
+You once told me
+that you didn't really have
+pure-hearted friends in college.
+
+System Analysis:
+
+I think the database
+has detected at least one.
+
+*ahem*
+
+Look at me.`,
+
+`> Loading Memory Sector #09...
+
+REMOTE MONITORING
+
+You're now far away from home,
+building a life of your own,
+making new friends,
+and manufacturing tiny chips.
+
+This is an automated reminder:
+
+Never think nobody cares.
+
+Never think you're alone.
+
+Never think you're bothering people.
+
+Because I care.
+
+Authorized Attachments:
+
+✓ Random reels
+✓ Random stickers
+✓ Random memes
+✓ Random nonsense
+
+Permission granted permanently.`,
+
+`> Loading Memory Sector #10...
+
+KNOWN BUG REPORT
+
+Issue:
+Overthinking
+
+Symptoms:
+• Making problems look bigger
+• Making yourself look smaller
+
+Diagnosis:
+Unfortunately contagious.
+
+I have it too.
+
+Recommended Fix:
+
+Stop gaslighting yourself.
+
+Pure friendship exists, darling.
+
+No pressure.
+Low maintenance.
+Still there.`,
+
+`═══════════════════════════════
+MAIN COURSE OF THE DAY
+═══════════════════════════════
+
+HAPPY BIRTHDAY KK FANI 🎂
+
+May your health stay strong,
+your bugs stay minimal,
+your code compile successfully,
+and your memory never leak.
+
+Semoga panjang umur,
+sehat selalu,
+semakin banyak berkah,
+dan selalu dalam lindungan Allah SWT.
+
+Semoga setiap langkahmu Allah ridhoi.
+
+Semoga Allah mewujudkan semua
+wishlist karir dan jalan hidup
+yang kamu impikan.
+
+Semoga kamu selalu dikelilingi
+orang-orang baik yang
+mendekatkanmu kepada-Nya.
+
+Semoga pertemanan ini
+tetap panjang umur,
+bermanfaat dunia dan akhirat.
+
+Aamiin.
+
+LOVE YOU LOVE YOU 90000 ❤️
+
+FINAL REMINDER
+
+PLEASE UPDATE YOUR
+EMERGENCY CONTACT.
+
+Current Status:
+
+Suspiciously not me.
+
+END OF TRANSMISSION.`
 ];
 
-let index = 0;
+let current = 0;
 
-function nextMemory() {
-  if (index < memories.length) {
-    document.getElementById("memory").innerHTML +=
-      "<p>" + memories[index] + "</p>";
-    index++;
-  }
+function nextMemory(){
+
+    document.getElementById("output").textContent =
+    memories[current];
+
+    current++;
+
+    if(current >= memories.length){
+        document.querySelector("button").innerText =
+        "RESTART SYSTEM";
+
+        current = 0;
+    }
 }
+
 </script>
 
 </body>
 </html>
+```
